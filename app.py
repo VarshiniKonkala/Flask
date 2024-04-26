@@ -6,10 +6,10 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes 
  
 # Load the trained model and vectorizer 
-with open('../ML/trained_model.pkl', 'rb') as model_file: 
+with open('trained_model.pkl', 'rb') as model_file: 
     nb_classifier = pickle.load(model_file) 
  
-with open('../ML/vectorizer.pkl', 'rb') as vectorizer_file: 
+with open('vectorizer.pkl', 'rb') as vectorizer_file: 
     vectorizer = pickle.load(vectorizer_file) 
  
 @app.route('/categorize_news', methods=['POST']) 
