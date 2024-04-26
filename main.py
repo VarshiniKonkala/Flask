@@ -1,7 +1,5 @@
 from flask import Flask, request, jsonify 
 from flask_cors import CORS  # Import CORS from flask_cors 
-from sklearn.feature_extraction.text import TfidfVectorizer 
-from sklearn.naive_bayes import MultinomialNB 
 import pickle 
  
 app = Flask(__name__) 
