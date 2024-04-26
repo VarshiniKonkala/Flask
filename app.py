@@ -11,7 +11,10 @@ with open('trained_model.pkl', 'rb') as model_file:
  
 with open('vectorizer.pkl', 'rb') as vectorizer_file: 
     vectorizer = pickle.load(vectorizer_file) 
- 
+@app.route('/',methods=['GET'])
+def fun():
+ return "Hello Varshini!!"
+
 @app.route('/categorize_news', methods=['POST']) 
 def categorize_news(): 
     data = request.get_json() 
@@ -68,5 +71,3 @@ def recommended_news():
     response.headers.add('Access-Control-Allow-Origin', '*') 
     response.headers.add('Access-Control-Allow-Methods', 'POST') 
     return response 
-if __name__ == '__main__': 
-    app.run(debug=True) 
