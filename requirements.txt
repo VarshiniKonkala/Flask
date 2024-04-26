@@ -1,0 +1,6 @@
+Flask
+request
+jsonify
+pickle
+CORS
+Gunicorn
